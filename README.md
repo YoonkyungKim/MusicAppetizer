@@ -1,4 +1,4 @@
-A web app that recommends music from countries around the world based on your favorite artists using Spotify API  
+### A web app that recommends music from countries around the world using Spotify API  
 
 How to use:  
 1. Login to Spotify  
