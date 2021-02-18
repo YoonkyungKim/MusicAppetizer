@@ -39,12 +39,12 @@ var stateKey = 'spotify_auth_state';
 
 var app = express();
 
-app.use(express.static(path.join(__dirname, './build')))
+app.use(express.static(path.join(__dirname, 'build')))
    .use(cors())
    .use(cookieParser());
 
 app.get('/', (req, res)=>{
-  res.sendFile(path.join(__dirname, "./build/index.html"));
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 app.get('/spotify_login', function(req, res) {
@@ -113,7 +113,7 @@ app.get('/callback', function(req, res) {
 
         // we can also pass the token to the browser to make requests from there
         // *redirect to client side
-        res.redirect('/' +
+        res.redirect('/spotify_login' +
           querystring.stringify({
             access_token: access_token,
             refresh_token: refresh_token
